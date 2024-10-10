@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Web Development",
+    "description": "Build responsive websites and web apps.",
+    "price": "$500"
+  },
+  {
+    "id": 2,
+    "name": "Graphic Design",
+    "description": "Create stunning graphics for brands.",
+    "price": "$200"
+  },
+  {
+    "id": 3,
+    "name": "SEO Optimization",
+    "description": "Optimize your site for search engines.",
+    "price": "$300"
+  },
+  {
+    "id": 1,
+    "name": "Web Development",
+    "description": "Build responsive websites and web apps.",
+    "price": "$500"
+  },
+  {
+    "id": 2,
+    "name": "Graphic Design",
+    "description": "Create stunning graphics for brands.",
+    "price": "$200"
+  },
+  {
+    "id": 3,
+    "name": "SEO Optimization",
+    "description": "Optimize your site for search engines.",
+    "price": "$300"
+  }
+]

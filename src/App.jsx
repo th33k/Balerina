@@ -4,7 +4,10 @@ import Hero from './Components/Hero/Hero';
 import ServiceCards from './Components/ServiseCards/ServiceCards';
 import About from './Components/About/About';
 import './App.css';
-import Cards from './Components/Cards/Cards';
+// import ServiceCards from './Components/ServiceCards';
+
+
+import CardList from './Components/CardList';
 
 
 const App = () => {
@@ -12,7 +15,7 @@ const App = () => {
     <div><Navbar/>
     <Hero/>
     <ServiceCards/>
-    <Cards/>
+    <CardList/>
     <About/>
     </div>
   )

@@ -1,31 +1,14 @@
-import React from 'react'
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
+// Cards.jsx
+import React from 'react';
 
-const Cards = () => {
+const Cards = ({ name, description, price }) => {
   return (
-    <div>
-        <Card style={{ width: '12rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-      </Card.Body>
-      <ListGroup className="list-group-flush">
-        <ListGroup.Item>Cras justo odio</ListGroup.Item>
-        <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-      </ListGroup>
-      <Card.Body>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
-      </Card.Body>
-    </Card>
+    <div className="card">
+      <h3>{name}</h3>
+      <p>{description}</p> {/* Make sure description is passed as a prop */}
+      <p className="price">{price}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Cards
+export default Cards;
