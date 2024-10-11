@@ -1,12 +1,15 @@
-// Cards.jsx
 import React from 'react';
+import './Cards.css'; // Import your CSS styles if any
 
-const Cards = ({ name, description, price }) => {
+const Cards = ({ name, description, price, image }) => {
   return (
     <div className="card">
-      <h3>{name}</h3>
-      <p>{description}</p> {/* Make sure description is passed as a prop */}
-      <p className="price">{price}</p>
+      <img src={image} alt={name} className="card-image" /> {/* Add image */}
+      <div className="card-content">
+        <h2>{name}</h2>
+        <p>{description}</p>
+        <p>{price}</p>
+      </div>
     </div>
   );
 };

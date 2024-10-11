@@ -17,8 +17,9 @@ const CardList = () => {
         <Cards
           key={service.id}
           name={service.name}
-          description={service.description} // Pass description prop here
+          description={service.description}
           price={service.price}
+          image={service.image} // Pass the image prop here
         />
       ))}
     </div>
