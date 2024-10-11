@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import ServiceCards from './Components/ServiseCards/ServiceCards';
 import About from './Components/About/About';
+
 import Cards from './Components/Cards/Cards';
  // Import Footer component
 import './App.css';
@@ -14,6 +15,7 @@ const App = () => {
     <Router>
       <div className="app-container">
         <Navbar />  {/* The Navbar will remain common across all pages */}
+
 
         {/* Set up routing */}
         <Routes>
