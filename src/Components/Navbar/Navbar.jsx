@@ -19,11 +19,11 @@ const Navbar = () => {
         className={isMobile ? 'nav-links-mobile' : 'nav-links'}
         onClick={() => setIsMobile(false)}
       >
-        <li><a href="#explore">Explore Services</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#login">Login</a></li>
-        <li><a href="#signup">Signup</a></li>
-        <li><a href="#become-tasker" className="tasker-btn">Become a Tasker</a></li>
+        <li><a href="/">Explore Services</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/signup">Signup</a></li>
+        <li><a href="/become-tasker" className="tasker-btn">Become a Tasker</a></li>
       </ul>
 
       {/* Hamburger menu button for mobile */}
