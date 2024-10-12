@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "name": "Local Moving",
+      "description": "Efficient moving services within your city.",
+      "price": "$200",
+      "image": "https://example.com/local_moving.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Long-Distance Moving",
+      "description": "Reliable long-distance moving services.",
+      "price": "$600",
+      "image": "https://example.com/long_distance_moving.jpg"
+    }
+  ]
+  

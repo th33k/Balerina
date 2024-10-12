@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "name": "Interior Painting",
+      "description": "Get your interior walls painted beautifully.",
+      "price": "$200",
+      "image": "https://example.com/interior_painting.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Exterior Painting",
+      "description": "Professional painting for your home's exterior.",
+      "price": "$300",
+      "image": "https://example.com/exterior_painting.jpg"
+    }
+  ]
+  

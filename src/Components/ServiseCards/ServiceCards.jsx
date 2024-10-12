@@ -2,81 +2,38 @@ import React, { useState } from 'react';
 import './ServiceCards.css';
 import { FaTools, FaTruckMoving, FaHome, FaScrewdriver, FaBroom, FaTree, FaPaintRoller, FaFire } from 'react-icons/fa';
 
-
-const ServiceCards = () => {
+const ServiceCards = ({ onCategoryChange }) => {
   const [activeCard, setActiveCard] = useState(null);
 
-  const handleCardClick = (index) => {
-    setActiveCard(index);
+  const categories = [
+    { id: 0, name: 'Assembly', icon: <FaTools /> },
+    { id: 1, name: 'Mounting', icon: <FaScrewdriver /> },
+    { id: 2, name: 'Moving', icon: <FaTruckMoving /> },
+    { id: 3, name: 'Cleaning', icon: <FaBroom /> },
+    { id: 4, name: 'Outdoor Help', icon: <FaTree /> },
+    { id: 5, name: 'Home Repairs', icon: <FaHome /> },
+    { id: 6, name: 'Painting', icon: <FaPaintRoller /> },
+    { id: 7, name: 'Trending', icon: <FaFire /> },
+  ];
+
+  const handleCardClick = (category) => {
+    setActiveCard(category.id);
+    onCategoryChange(category.name); // Call the parent function to change category
   };
 
   return (
     <nav className="service-cards">
-      {/* Service Cards */}
       <ul className="service-links">
-        <li
-          className={`service-item ${activeCard === 0 ? 'active' : ''}`}
-          onClick={() => handleCardClick(0)}
-        >
-          <FaTools className="icon" />
-          <p>Assembly</p>
-        </li>
-
-        <li
-          className={`service-item ${activeCard === 1 ? 'active' : ''}`}
-          onClick={() => handleCardClick(1)}
-        >
-          <FaScrewdriver className="icon" />
-          <p>Mounting</p>
-        </li>
-
-        <li
-          className={`service-item ${activeCard === 2 ? 'active' : ''}`}
-          onClick={() => handleCardClick(2)}
-        >
-          <FaTruckMoving className="icon" />
-          <p>Moving</p>
-        </li>
-
-        <li
-          className={`service-item ${activeCard === 3 ? 'active' : ''}`}
-          onClick={() => handleCardClick(3)}
-        >
-          <FaBroom className="icon" />
-          <p>Cleaning</p>
-        </li>
-
-        <li
-          className={`service-item ${activeCard === 4 ? 'active' : ''}`}
-          onClick={() => handleCardClick(4)}
-        >
-          <FaTree className="icon" />
-          <p>Outdoor Help</p>
-        </li>
-
-        <li
-          className={`service-item ${activeCard === 5 ? 'active' : ''}`}
-          onClick={() => handleCardClick(5)}
-        >
-          <FaHome className="icon" />
-          <p>Home Repairs</p>
-        </li>
-
-        <li
-          className={`service-item ${activeCard === 6 ? 'active' : ''}`}
-          onClick={() => handleCardClick(6)}
-        >
-          <FaPaintRoller className="icon" />
-          <p>Painting</p>
-        </li>
-
-        <li
-          className={`service-item ${activeCard === 7 ? 'active' : ''}`}
-          onClick={() => handleCardClick(7)}
-        >
-          <FaFire className="icon" />
-          <p>Trending</p>
-        </li>
+        {categories.map((category) => (
+          <li
+            key={category.id}
+            className={`service-item ${activeCard === category.id ? 'active' : ''}`}
+            onClick={() => handleCardClick(category)}
+          >
+            {category.icon}
+            <p>{category.name}</p>
+          </li>
+        ))}
       </ul>
     </nav>
   );

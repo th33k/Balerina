@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "name": "Smart Home Setup",
+      "description": "Set up your smart home devices seamlessly.",
+      "price": "$250",
+      "image": "https://example.com/smart_home_setup.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Furniture Assembly & Moving",
+      "description": "Trending combo of assembling and moving your furniture.",
+      "price": "$300",
+      "image": "https://example.com/furniture_assembly_moving.jpg"
+    }
+  ]
+  

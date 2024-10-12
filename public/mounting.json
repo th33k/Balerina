@@ -1,0 +1,16 @@
+[
+    {
+      "id": 1,
+      "name": "Mounting 1",
+      "description": "Assemble your furniture quickly and professionally.",
+      "price": "$100",
+      "image": "https://example.com/furniture.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Mounting 2",
+      "description": "Set up your devices and appliances.",
+      "price": "$50",
+      "image": "https://example.com/device.jpg"
+    }
+  ]

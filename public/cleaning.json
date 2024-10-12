@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "name": "House Cleaning",
+      "description": "Deep clean your house with eco-friendly products.",
+      "price": "$100",
+      "image": "https://example.com/house_cleaning.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Carpet Cleaning",
+      "description": "Professional carpet cleaning service.",
+      "price": "$80",
+      "image": "https://example.com/carpet_cleaning.jpg"
+    }
+  ]
+  

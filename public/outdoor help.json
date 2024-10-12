@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "name": "Lawn Mowing",
+      "description": "Get your lawn mowed professionally.",
+      "price": "$50",
+      "image": "https://example.com/lawn_mowing.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Garden Cleanup",
+      "description": "Full garden cleaning and maintenance.",
+      "price": "$100",
+      "image": "https://example.com/garden_cleanup.jpg"
+    }
+  ]
+  

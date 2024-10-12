@@ -1,17 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import Cards from './Cards/Cards'; // Import the Cards component
 
-
-
-const CardList = () => {
+const CardList = ({ selectedCategory }) => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch('/services.json') // Adjust path if necessary
-      .then((response) => response.json())
-      .then((data) => setServices(data))
-      .catch((error) => console.error('Error fetching services:', error));
-  }, []);
+    if (selectedCategory) {
+      // Dynamically fetch the JSON file based on the category
+      fetch(`/${selectedCategory.toLowerCase()}.json`) // Assuming category names match file names
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then((data) => setServices(data))
+        .catch((error) => console.error('Error fetching services:', error));
+    }
+  }, [selectedCategory]); // Re-fetch whenever the category changes
 
   return (
     <div className="card-list">
