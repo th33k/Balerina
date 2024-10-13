@@ -9,8 +9,9 @@ import './App.css';
 import Home from './Components/Home/Home';
 import SignUp from './Components/Signup/Signup'; 
 import Login from './Components/Login/Login';
-import AboutUs from './Components/AboutUs/AboutUs';
+// import AboutUs from './Components/AboutUs/AboutUs';
 import TaskerForm from './Components/TaskerForm/TaskerForm';
+import ProfilePage from './Components/Profilepage/Profilepage';
 const App = () => {
   return (
     <Router>
@@ -22,7 +23,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />  {/* Home or landing page */}
           <Route path="/services" element={<ServiceCards />} />  {/* Services page */}
-          <Route path="/about" element={<AboutUs />} />  {/* About page */}
+          <Route path="/about" element={<ProfilePage />} />  {/* About page */}
           <Route path="/Signup" element={<SignUp/>} />  {/* Signup page */}
           <Route path="/login" element={<Login/>} />  {/* Login page */}
           <Route path="/become-tasker" element={<TaskerForm />} />  {/* TaskerForm page */}
