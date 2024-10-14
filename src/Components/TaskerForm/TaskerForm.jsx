@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './TaskerForm.css';
+import { useNavigate } from 'react-router-dom';  // Import useNavigate
 
 const TaskerForm = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +15,8 @@ const TaskerForm = () => {
     country: ''
   });
 
+  const navigate = useNavigate();  // Initialize the useNavigate hook
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -27,7 +30,8 @@ const TaskerForm = () => {
         body: JSON.stringify(formData)
       });
       if (response.ok) {
-        alert('Application submitted successfully!');
+        alert('You are a Tasker now!');
+        navigate('/seller');  // Redirect to Seller page after successful signup
       } else {
         alert('Error submitting application');
       }
@@ -42,20 +46,90 @@ const TaskerForm = () => {
       <p>Join our community of skilled Taskers and start earning!</p>
       <form onSubmit={handleSubmit}>
         <h2>Personal Information</h2>
-        <input type="text" name="fullName" placeholder="Full Name" value={formData.fullName} onChange={handleChange} required />
-        <input type="email" name="email" placeholder="Email Address" value={formData.email} onChange={handleChange} required />
-        <input type="text" name="phoneNumber" placeholder="Phone Number" value={formData.phoneNumber} onChange={handleChange} />
+        <input 
+          type="text" 
+          name="fullName" 
+          placeholder="Full Name" 
+          value={formData.fullName} 
+          onChange={handleChange} 
+          required 
+        />
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="Email Address" 
+          value={formData.email} 
+          onChange={handleChange} 
+          required 
+        />
+        <input 
+          type="text" 
+          name="phoneNumber" 
+          placeholder="Phone Number" 
+          value={formData.phoneNumber} 
+          onChange={handleChange} 
+        />
 
         <h2>Address Information</h2>
-        <input type="text" name="addressLine1" placeholder="Address Line 1" value={formData.addressLine1} onChange={handleChange} required />
-        <input type="text" name="addressLine2" placeholder="Address Line 2" value={formData.addressLine2} onChange={handleChange} />
-        <input type="text" name="city" placeholder="City" value={formData.city} onChange={handleChange} required />
-        <input type="text" name="stateProvince" placeholder="State/Province" value={formData.stateProvince} onChange={handleChange} />
-        <input type="text" name="postalCode" placeholder="Postal Code" value={formData.postalCode} onChange={handleChange} required />
-        <input type="text" name="country" placeholder="Country" value={formData.country} onChange={handleChange} required />
+        <input 
+          type="text" 
+          name="addressLine1" 
+          placeholder="Address Line 1" 
+          value={formData.addressLine1} 
+          onChange={handleChange} 
+          required 
+        />
+        <input 
+          type="text" 
+          name="addressLine2" 
+          placeholder="Address Line 2" 
+          value={formData.addressLine2} 
+          onChange={handleChange} 
+        />
+        <input 
+          type="text" 
+          name="city" 
+          placeholder="City" 
+          value={formData.city} 
+          onChange={handleChange} 
+          required 
+        />
+        <input 
+          type="text" 
+          name="stateProvince" 
+          placeholder="State/Province" 
+          value={formData.stateProvince} 
+          onChange={handleChange} 
+        />
+        <input 
+          type="text" 
+          name="postalCode" 
+          placeholder="Postal Code" 
+          value={formData.postalCode} 
+          onChange={handleChange} 
+          required 
+        />
+        <input 
+          type="text" 
+          name="country" 
+          placeholder="Country" 
+          value={formData.country} 
+          onChange={handleChange} 
+          required 
+        />
 
         <button type="submit">Submit Application</button>
-        <button type="reset" onClick={() => setFormData({})}>Reset Form</button>
+        <button type="reset" onClick={() => setFormData({
+          fullName: '',
+          email: '',
+          phoneNumber: '',
+          addressLine1: '',
+          addressLine2: '',
+          city: '',
+          stateProvince: '',
+          postalCode: '',
+          country: ''
+        })}>Reset Form</button>
         <p>Your information will be kept private.</p>
       </form>
     </div>

@@ -1,10 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ProfilePage.css';
 
 const ProfilePage = () => {
+  const navigate = useNavigate();
+
+  const handleBookNow = () => {
+    navigate('/book');  // This will navigate to the Book component
+  };
+
   return (
     <div className="profile-container">
       <div className="profile-left">
+        {/* Profile Info */}
         <div className="profile-header">
           <img
             className="profile-image"
@@ -18,6 +26,7 @@ const ProfilePage = () => {
           </div>
         </div>
 
+        {/* Rating Section */}
         <div className="profile-rating">
           <h2>5.0 <span>⭐</span></h2>
           <div className="rating-bars">
@@ -30,6 +39,7 @@ const ProfilePage = () => {
           <p><a href="#">All Reviews (1)</a> | <a href="#">+ Add Review</a></p>
         </div>
 
+        {/* Projects Section */}
         <h2 className="section-title">My Projects</h2>
         <div className="projects">
           <img src="https://via.placeholder.com/150" alt="project" />
@@ -38,6 +48,7 @@ const ProfilePage = () => {
         </div>
         <button className="see-more">see more</button>
 
+        {/* Description Section */}
         <h2 className="section-title">Description</h2>
         <div className="description">
           <h3>Top skills</h3>
@@ -56,6 +67,7 @@ const ProfilePage = () => {
         </div>
       </div>
 
+      {/* Right Section: Booking */}
       <div className="profile-right">
         <div className="price-box">
           <h3>BASIC PACKAGE</h3>
@@ -68,7 +80,7 @@ const ProfilePage = () => {
             <li>Cleaning of bathroom surfaces</li>
             <li>Emptying trash bins</li>
           </ul>
-          <button className="book-now">Book Now</button>
+          <button className="book-now" onClick={handleBookNow}>Book Now</button>
         </div>
       </div>
     </div>

@@ -9,6 +9,9 @@ import SignUp from './Components/Signup/Signup';
 import Login from './Components/Login/Login';
 import TaskerForm from './Components/TaskerForm/TaskerForm';
 import ProfilePage from './Components/Profilepage/Profilepage';
+import Seller from './Components/Seller/seller';
+import BookingForm from './Components/Book/Book';
+import AboutUs from './Components/AboutUs/AboutUs';
 
 const App = () => {
   return (
@@ -20,11 +23,13 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />  {/* Home or landing page */}
           <Route path="/services" element={<ServiceCards />} />  {/* Services page */}
-          <Route path="/about" element={<ProfilePage />} />  {/* About page */}
+          <Route path="/about" element={<AboutUs />} />  {/* About page */}
           <Route path="/signup" element={<SignUp />} />  {/* Signup page */}
           <Route path="/login" element={<Login />} />  {/* Login page */}
           <Route path="/become-tasker" element={<TaskerForm />} />  {/* TaskerForm page */}
           <Route path="/profilepage" element={<ProfilePage />} />  {/* Profile page */}
+          <Route path="/seller" element={<Seller />} />
+          <Route path="/book" element={<BookingForm />} />
           {/* Add more routes as needed */}
         </Routes>
 
