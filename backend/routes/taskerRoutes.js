@@ -14,13 +14,18 @@ router.post('/', async (req, res) => {
 });
 
 // Get all taskers
-router.get('/taskers', async (req, res) => {
-  try {
-    const taskers = await Tasker.find();
-    res.status(200).json(taskers);
-  } catch (err) {
-    res.status(500).json({ message: 'Error retrieving taskers', error: err });
-  }
-});
+// Get a specific tasker (assuming seller is a tasker)
+router.get('/seller/:id', async (req, res) => {
+    try {
+      const tasker = await Tasker.findById(req.params.id);  // Assuming seller is identified by ID
+      if (!tasker) {
+        return res.status(404).json({ message: 'Seller not found' });
+      }
+      res.status(200).json(tasker);
+    } catch (err) {
+      res.status(500).json({ message: 'Error retrieving seller', error: err });
+    }
+  });
+  
 
 module.exports = router;
