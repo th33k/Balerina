@@ -3,7 +3,7 @@ const Tasker = require('../models/Tasker');
 const router = express.Router();
 
 // Create a new tasker
-router.post('/taskers', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const newTasker = new Tasker(req.body);
     const savedTasker = await newTasker.save();

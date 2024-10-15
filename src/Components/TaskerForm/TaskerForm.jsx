@@ -12,7 +12,8 @@ const TaskerForm = () => {
     city: '',
     stateProvince: '',
     postalCode: '',
-    country: ''
+    country: '',
+    category: ''
   });
 
   const navigate = useNavigate();  // Initialize the useNavigate hook
@@ -24,7 +25,7 @@ const TaskerForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/taskers', {
+      const response = await fetch('http://localhost:5001/api/taskers', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
@@ -117,6 +118,21 @@ const TaskerForm = () => {
           onChange={handleChange} 
           required 
         />
+        <select 
+          name="category" 
+          value={formData.category} 
+          onChange={handleChange} 
+          required
+        >
+          <option value="">Select Category</option>
+          <option value="Assembly">Assembly</option>
+          <option value="Mounting">Mounting</option>
+          <option value="Moving">Moving</option>
+          <option value="Cleaning">Cleaning</option>
+          <option value="Outdoor Help">Outdoor Help</option>
+          <option value="Home Repairs">Home Repairs</option>
+          <option value="Painting">Painting</option>
+        </select>
 
         <button type="submit">Submit Application</button>
         <button type="reset" onClick={() => setFormData({
@@ -128,7 +144,8 @@ const TaskerForm = () => {
           city: '',
           stateProvince: '',
           postalCode: '',
-          country: ''
+          country: '',
+          category: ''
         })}>Reset Form</button>
         <p>Your information will be kept private.</p>
       </form>

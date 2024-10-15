@@ -9,7 +9,8 @@ const TaskerSchema = new mongoose.Schema({
   city: { type: String, required: true },
   stateProvince: { type: String },
   postalCode: { type: String, required: true },
-  country: { type: String }
+  country: { type: String },
+  category: { type: String, required: true }
 });
 
 module.exports = mongoose.model('Tasker', TaskerSchema);
